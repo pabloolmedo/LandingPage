@@ -15,16 +15,17 @@ body {
 
 .container {
     display: flex;
+    justify-content: flex-end;
     flex-direction: column;
     background-color: #F1F4F5;
     background-image: url(../img/el-taco-no-hace-la-personal-bg.png);
     background-repeat: repeat;
-    max-height: 100vh;
+    height: 100vh;
 }
 
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .nav-logo {
@@ -43,6 +44,7 @@ nav .logo {
     align-items: center;
     justify-content: center;
     padding-right: 80px;
+   height: 100%;
 }
 
 .img {
@@ -218,11 +220,13 @@ blockquote:after {
 
 @media all and (max-width: 960px) {
     .container {
-        max-height: 100%;
+        height: 100%;
+        justify-content: flex-start;
     }
     .contenido {
         flex-direction: column-reverse;
         padding-right: 0;
+        max-height: 100%;
     }
     .img {
         margin-top: 50px;
@@ -270,19 +274,26 @@ blockquote:after {
         display: none;
     }
 }
+@media all and (max-width: 480px){
+    .text-email{
+        font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    }
+}
 
 @media all and (max-width: 320px) {
     .img .big-pic {
         max-height: 50vh;
     }
-   
+
     .button-email{
         font-size: 16px;
     }
     .text-email {
         font-size: 16px;
         line-height: 18px;
-       
+
         text-align: center;
     }
     .quote {
@@ -297,8 +308,8 @@ blockquote:after {
         max-height: 30vh;
     }
     .button-email {
-       
+
         font-size: 14px;
-       
+
     }
 }
