@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F4F5;
+    background-image: url(../img/el-taco-no-hace-la-personal-bg.png);
+    background-repeat: repeat;
+    max-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+nav .logo {
+    height: 3.5vh;
+    margin-left: 33px;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 80px;
+}
+
+.img {
+    display: flex;
+    align-items: flex-end;
+}
+
+.img .big-pic {
+    max-height: 80vh;
+}
+
+.little-text {
+    color: #999999;
+    margin-left: -40px;
+    line-height: 16px;
+    font-weight: 400;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.email {
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50px;
+}
+
+.email h1 {
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 45px;
+    color: #212121;
+}
+
+.input {
+    display: flex;
+    margin: 30px 0 40px 0;
+}
+
+.input-email {
+    width: 60%;
+    padding: 0 50px 0 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    line-height: 26px;
+    color: #212121;
+    font-weight: lighter;
+    border: 1px solid #999999;
+}
+
+.input-email:focus {
+    outline: none !important;
+    border: 1px solid #2BBD3E;
+}
+
+.button-email {
+    font-size: 19px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: #2BBD3E;
+    padding: 15px 25px;
+    margin-left: 10px;
+    box-shadow: 5px 5px #16891E;
+    border: none;
+}
+
+.button-email:hover {
+    background-color: rgb(243, 87, 15);
+    box-shadow: 5px 5px rgb(207, 72, 10);
+    transition: 7000ms;
+}
+
+.text-email {
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: lighter;
+    color: #212121;
+}
+
+/* ============ SECTION ============*/
+
+.container-section {
+    background: #ffffff;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.section h5 {
+    font-weight: 800;
+    color: #212121;
+    margin-bottom: 20px;
+    line-height: 16px;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    color: #5b5b5b;
+    line-height: 32px;
+    font-weight: lighter;
+    quotes: "”";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote:after {
+    content: close-quote;
+}
+
+.section p {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    line-height: 27px;
+    color: #212121;
+}
+
+.link-blog {
+    margin-top: 50px;
+}
+
+.link-blog a {
+    color: #2BBD3E;
+    margin-right: 2px;
+    font-size: 17px;
+    line-height: 27px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.link-blog a:hover {
+    margin-right: 5px;
+    transition: 300ms;
+}
+
+/*========= MOBILE ========*/
+
+@media all and (max-width: 1024px) {
+    .contenido {
+        flex-direction: row-reverse;
+        padding-right: 40px;
+    }
+    .img .big-pic {
+        max-height: 70vh;
+    }
+    .email {
+        margin-left: 0;
+        margin-top: -40px;
+    }
+    .little-text {
+        margin-left: -10px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .container {
+        max-height: 100%;
+    }
+    .contenido {
+        flex-direction: column-reverse;
+        padding-right: 0;
+    }
+    .img {
+        margin-top: 50px;
+    }
+    .email {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .quote {
+        font-size: 25px;
+        padding: 50px;
+        line-height: 25px;
+    }
+}
+
+@media all and (max-width: 520px) {
+    .email h1 {
+        font-size: 23px;
+        line-height: 25px;
+        padding-left: 10px;
+    }
+    .input {
+        margin: 15px 0 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-email {
+        width: 80%;
+        padding: 15px 0px 15px 10px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .button-email {
+        width: 50%;
+        font-size: 18px;
+        line-height: 16px;
+        padding: 15px 25px;
+        margin: 0;
+    }
+    .text-email{
+        padding: 0 5px;
+    }
+    .little-text {
+        display: none;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .img .big-pic {
+        max-height: 50vh;
+    }
+   
+    .button-email{
+        font-size: 16px;
+    }
+    .text-email {
+        font-size: 16px;
+        line-height: 18px;
+       
+        text-align: center;
+    }
+    .quote {
+        font-size: 15px;
+        padding: 20px;
+        line-height: 25px;
+    }
+}
+
+@media all and (max-width: 260px) {
+    .img .big-pic {
+        max-height: 30vh;
+    }
+    .button-email {
+       
+        font-size: 14px;
+       
+    }
+}
